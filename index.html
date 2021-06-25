@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <main>
+        <header>
+            <section class="hands"> 
+            <div>
+                <h1>
+             <span>Rock</span>
+             <span>Paper</span>
+             <span>Scissors</span>
+            </h1>
+            </div>
+            <div>
+                <p>
+                  Computer:<span id="computer-score">0</span>
+                </p>
+                <p>
+                  User:<span id="user-score">0</span>
+                </p>
+            </div>
+            </section>
+        </header>
+        <section class="hands">
+            <button>
+                <i class="far fa-hand-rock" onclick="check('rock') && gameClicked()"></i>
+            </button>
+            <button>
+                <i class="far fa-hand-paper" onclick="check('paper') && gameClicked()"></i>
+            </button>
+            <button>
+                <i class="far fa-hand-scissors" onclick="check('scissors') && gameClicked()"></i>
+            </button>
+        </section>
+        <section class="result">
+            <div class="game-start" id="game-start">
+                <button class="game-start" id="btn-game-start" onclick="gameClicked()">Start Game</button>
+            </div>
+            <div class="game-result hidden" id="game-result">
+            <p id="computer-choice"> Computer Choose </p>
+            <p id="user-choice"> User Choose Paper</p>
+            <div id="result" class="result-message">Match Tie</div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
